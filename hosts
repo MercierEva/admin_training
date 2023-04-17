@@ -1,4 +1,4 @@
 [galaxyservers]
-gat-27.eu.galaxy.training ansible_connection=local ansible_user=ubuntu
+gat-15.eu.galaxy.training ansible_connection=local ansible_user=ubuntu
 [dbservers:children]
 galaxyservers
