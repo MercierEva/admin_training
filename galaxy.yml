@@ -2,6 +2,8 @@
 - hosts: dbservers
   become: true
   become_user: root
+  vars_files:
+    -  group_vars/secret.yml
   pre_tasks:
     - name: Install Dependencies
       package:
@@ -24,3 +26,4 @@
     - role: galaxyproject.miniconda
       become: true
       become_user: "{{ galaxy_user_name }}"
+    - galaxyproject.nginx
